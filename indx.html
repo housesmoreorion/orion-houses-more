@@ -1,155 +1,248 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ORION AI | Houses & More</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORION AI | Houses & More</title>
 
-  <style>
-    * { box-sizing: border-box; }
+<style>
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f3ee;
-      color: #222;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f5f7;
+  color: #20242a;
+}
 
-    header {
-      background: #111;
-      color: white;
-      padding: 60px 25px;
-      text-align: center;
-    }
+.app {
+  display: flex;
+  min-height: 100vh;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 46px;
-      letter-spacing: 4px;
-    }
+/* MENU */
+.sidebar {
+  width: 250px;
+  background: #15171b;
+  color: white;
+  padding: 28px 18px;
+}
 
-    header p {
-      margin-top: 12px;
-      font-size: 18px;
-    }
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 4px;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+.brand {
+  color: #aaa;
+  margin-bottom: 35px;
+}
 
-    .intro {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+.menu button {
+  width: 100%;
+  padding: 13px;
+  margin: 5px 0;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #ddd;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.menu button:hover,
+.menu button.active {
+  background: #2c3037;
+  color: white;
+}
 
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-    }
+/* CONTENUTO */
+.main {
+  flex: 1;
+  padding: 35px;
+}
 
-    .card h3 { margin-top: 0; }
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .card p {
-      color: #555;
-      line-height: 1.5;
-    }
+.top h1 {
+  margin: 0;
+}
 
-    .orion {
-      margin-top: 40px;
-      padding: 35px;
-      border-radius: 16px;
-      background: #222;
-      color: white;
-    }
+.orion-status {
+  background: #15171b;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #777;
-    }
-  </style>
+.subtitle {
+  color: #6b7078;
+  margin-bottom: 30px;
+}
+
+/* CARDS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px,1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat {
+  background: white;
+  padding: 20px;
+  border-radius: 13px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.06);
+}
+
+.number {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* SEZIONI */
+.panel {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.06);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+/* INVESTIMENTI */
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 12px;
+}
+
+.stage {
+  background: #f4f5f7;
+  padding: 18px;
+  border-radius: 11px;
+  min-height: 110px;
+}
+
+.stage strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* PULSANTE */
+.primary {
+  border: 0;
+  background: #15171b;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+/* PAGINE */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.orion-box {
+  background: #15171b;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+@media(max-width:700px) {
+  .app { display:block; }
+  .sidebar { width:100%; }
+  .main { padding:20px; }
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>ORION AI</h1>
-  <p>HOUSES & MORE</p>
-  <p>Il sistema operativo immobiliare di Morena</p>
-</header>
+<div class="app">
 
-<main class="container">
+<aside class="sidebar">
 
-  <section class="intro">
-    <h2>Centro Operativo Houses & More</h2>
-    <p>Un unico sistema per organizzare, analizzare e sviluppare l'attività immobiliare.</p>
-  </section>
+<div class="logo">ORION AI</div>
+<div class="brand">HOUSES & MORE</div>
 
-  <section class="grid">
+<div class="menu">
+<button class="active" onclick="showPage('home',this)">🏠 Dashboard</button>
+<button onclick="showPage('investimenti',this)">🏛️ Investimenti</button>
+<button onclick="showPage('immobili',this)">🏡 Immobili</button>
+<button onclick="showPage('cantieri',this)">🏗️ Cantieri</button>
+<button onclick="showPage('clienti',this)">👥 Clienti e Mandati</button>
+<button onclick="showPage('marketing',this)">📸 Marketing</button>
+<button onclick="showPage('agenda',this)">📅 Agenda</button>
+<button onclick="showPage('documenti',this)">📁 Documenti</button>
+<button onclick="showPage('amministrazione',this)">📊 Amministrazione</button>
+<button onclick="showPage('orion',this)">✦ ORION AI</button>
+</div>
 
-    <div class="card">
-      <h3>🏛️ INVESTIMENTI</h3>
-      <p>Aste, crediti, saldi a stralcio e opportunità immobiliari.</p>
-    </div>
+</aside>
 
-    <div class="card">
-      <h3>🏠 IMMOBILI</h3>
-      <p>Schede immobili, documentazione, incarichi e stato delle pratiche.</p>
-    </div>
+<main class="main">
 
-    <div class="card">
-      <h3>🏗️ CANTIERI</h3>
-      <p>Gestione lavori, unità immobiliari, costi e avanzamento cantieri.</p>
-    </div>
+<!-- DASHBOARD -->
 
-    <div class="card">
-      <h3>📸 MARKETING</h3>
-      <p>Foto, rendering, planimetrie 2D/3D, virtual tour, annunci e siti.</p>
-    </div>
+<section id="home" class="page active">
 
-    <div class="card">
-      <h3>👥 CLIENTI E MANDATI</h3>
-      <p>Clienti, incarichi, firme digitali, privacy e antiriciclaggio.</p>
-    </div>
+<div class="top">
+<h1>Centro Operativo</h1>
+<div class="orion-status">● ORION ATTIVO</div>
+</div>
 
-    <div class="card">
-      <h3>📅 AGENDA</h3>
-      <p>Appuntamenti, attività, priorità, follow-up e libro giornale.</p>
-    </div>
+<p class="subtitle">Houses & More — controllo generale dell'attività immobiliare</p>
 
-    <div class="card">
-      <h3>📊 AMMINISTRAZIONE</h3>
-      <p>Spese, costi, ricavi e redditività degli investimenti.</p>
-    </div>
+<div class="stats">
 
-  </section>
+<div class="stat">
+<div class="number">4</div>
+Cantieri
+</div>
 
-  <section class="orion">
-    <h2>ORION — CENTRO DI COMANDO</h2>
-    <p>
-      Orion dovrà cercare opportunità, organizzare informazioni e documenti,
-      coordinare il lavoro e preparare a Morena ciò che richiede una decisione.
-    </p>
-  </section>
+<div class="stat">
+<div class="number">7</div>
+Immobili
+</div>
 
-</main>
+<div class="stat">
+<div class="number">0</div>
+Nuove opportunità
+</div>
 
-<footer>
-  ORION AI • HOUSES & MORE
-</footer>
+<div class="stat">
+<div class="number">0</div>
+Decisioni urgenti
+</div>
 
-</body>
-</html>
+</div>
+
+<div class="panel">
+<h2>Priorità</h2>
+<p>Qui ORION mostrerà automaticamente le attività che richiedono la tua attenzione.</p>
+</div>
+
+<div class="orion-box">
+<h2>✦ ORION AI</h2>
+<p>
+Il centro intelligente di H
 
 
 
