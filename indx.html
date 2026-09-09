@@ -6,9 +6,7 @@
   <title>ORION AI | Houses & More</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -20,14 +18,14 @@
     header {
       background: #111;
       color: white;
-      padding: 50px 25px;
+      padding: 60px 25px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 42px;
-      letter-spacing: 3px;
+      font-size: 46px;
+      letter-spacing: 4px;
     }
 
     header p {
@@ -45,6 +43,113 @@
       text-align: center;
       margin-bottom: 40px;
     }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    }
+
+    .card h3 { margin-top: 0; }
+
+    .card p {
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .orion {
+      margin-top: 40px;
+      padding: 35px;
+      border-radius: 16px;
+      background: #222;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>ORION AI</h1>
+  <p>HOUSES & MORE</p>
+  <p>Il sistema operativo immobiliare di Morena</p>
+</header>
+
+<main class="container">
+
+  <section class="intro">
+    <h2>Centro Operativo Houses & More</h2>
+    <p>Un unico sistema per organizzare, analizzare e sviluppare l'attività immobiliare.</p>
+  </section>
+
+  <section class="grid">
+
+    <div class="card">
+      <h3>🏛️ INVESTIMENTI</h3>
+      <p>Aste, crediti, saldi a stralcio e opportunità immobiliari.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏠 IMMOBILI</h3>
+      <p>Schede immobili, documentazione, incarichi e stato delle pratiche.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏗️ CANTIERI</h3>
+      <p>Gestione lavori, unità immobiliari, costi e avanzamento cantieri.</p>
+    </div>
+
+    <div class="card">
+      <h3>📸 MARKETING</h3>
+      <p>Foto, rendering, planimetrie 2D/3D, virtual tour, annunci e siti.</p>
+    </div>
+
+    <div class="card">
+      <h3>👥 CLIENTI E MANDATI</h3>
+      <p>Clienti, incarichi, firme digitali, privacy e antiriciclaggio.</p>
+    </div>
+
+    <div class="card">
+      <h3>📅 AGENDA</h3>
+      <p>Appuntamenti, attività, priorità, follow-up e libro giornale.</p>
+    </div>
+
+    <div class="card">
+      <h3>📊 AMMINISTRAZIONE</h3>
+      <p>Spese, costi, ricavi e redditività degli investimenti.</p>
+    </div>
+
+  </section>
+
+  <section class="orion">
+    <h2>ORION — CENTRO DI COMANDO</h2>
+    <p>
+      Orion dovrà cercare opportunità, organizzare informazioni e documenti,
+      coordinare il lavoro e preparare a Morena ciò che richiede una decisione.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  ORION AI • HOUSES & MORE
+</footer>
+
+</body>
+</html>
 
 
 
